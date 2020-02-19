@@ -9,8 +9,6 @@ print(str_1[::-1])
 print(str_1[-7:-10:-1])
 print(str_1[::-2])
 
-
-
 str_1 = 'hwk is handsome '
 #capitalize() 首字母大写
 print(str_1.capitalize())
