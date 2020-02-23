@@ -1,7 +1,7 @@
-#小整数对象池 [-5,256]
-#intern机制处理空格一个单词的复用机会大，所以创建一次，有空格创建多次，但是字符串长度大于20，就不是创建一次了。
-#test111
-#xiao na na
+# 小整数对象池 [-5,256]
+# intern机制处理空格一个单词的复用机会大，所以创建一次，有空格创建多次，但是字符串长度大于20，就不是创建一次了。
+# test111
+# xiao na na
 
 
 str_1 = 'hello world'
@@ -12,17 +12,17 @@ print(str_1[-7:-10:-1])
 print(str_1[::-2])
 
 str_1 = 'hwk is handsome '
-#capitalize() 首字母大写
+# capitalize() 首字母大写
 print(str_1.capitalize())
 
-#istitle,title
+# istitle,title
 print(str_1.istitle())
 print(str_1.title())
 
-#upper isupper 
-#lower islower
-#find rfind lfind
-#replace(old,new[,max])
+# upper isupper
+# lower islower
+# find rfind lfind
+# replace(old,new[,max])
 
 # encode 编码 decode 解码
 msg = '哈哈！'
@@ -34,14 +34,35 @@ print(msg_decode)
 # endwith startswith --->True False
 print(r'\a')
 
-#isalpha 字母 isdigit 数字
-list_1 = [1,2,3,4,5,6]
+# isalpha 字母 isdigit 数字
+list_1 = [1, 2, 3, 4, 5, 6]
 a = list_1[:2:-1]
 print(a)
 
-#join
+# join
 
-x='abc'
+x = 'abc'
 y = 'def'
-z = ['d','e','f']
-print(x.join(y),'------------',x.join(z))
+z = ['d', 'e', 'f']
+print(x.join(y), '------------', x.join(z))
+
+# 作用域：LEGB
+# L:local 本地 局部变量
+# E:enclosing 嵌套
+# G: Global 全局
+# B:built_in 内置
+
+a = 1
+
+
+def tt():
+    a = 10
+
+    def inner_tt():
+        a = 100
+        print(a)
+
+    inner_tt()
+
+
+tt()
